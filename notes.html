@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Khoadoan.page Notes</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-size: 24px;
+            }
+
+            #notebox {
+                width: 400px;
+                height: 200px;
+            }
+            .savebtn {
+               width: 70px;
+               height: 35px;
+               color: white;
+               background: rgb(232, 232, 232);
+               border: 0 solid black;
+               border-radius: 100px;
+               color: black;
+               font-weight: 600;
+               cursor: pointer;
+            }
+            .savebtn:hover {
+                background: rgb(214, 214, 214);
+            }
+
+            #container {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+
+            .grid-item {
+                text-align: left;
+                border: 2px solid black;
+                border-radius: 6px;
+                margin: 10px;
+                height: 200px;
+                position: relative;
+            }
+            strong {
+                color: rgb(255, 191, 0);
+            }
+            #logo {
+                text-align: left;
+                margin: 10px;
+            }
+            #navbar {
+                margin-bottom: 20px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                background: rgb(226, 226, 226)
+            }
+            
+            .textarea {
+                width: 100%;
+                height:100%;
+            }
+            .del-btn {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+            .edit-btn {
+                position: absolute;
+                right: 18px;
+                top: 0px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div id="navbar">
+               <div id="logo">Khoadoan.page <strong>Notes</strong></div>
+            </div>
+            <div id="headercontainer">
+            <textarea id="notebox"></textarea>
+            <br>
+            <button class="savebtn" onclick="save()">Save</button>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="container">
+                
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
