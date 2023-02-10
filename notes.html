@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Khoadoan.page Notes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: "Roboto Mono";
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-size: 24px;
+            }
+            textarea {
+                resize: none;
+                font-size: 16px;
+            }
+            #notebox {
+                width: 400px;
+                height: 200px;
+                border: 0 solid black;
+                box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+            }
+            .savebtn {
+               width: 70px;
+               height: 35px;
+               color: white;
+               background: rgb(232, 232, 232);
+               border: 0 solid black;
+               border-radius: 100px;
+               color: black;
+               font-weight: 600;
+               cursor: pointer;
+            }
+            .savebtn:hover {
+                background: rgb(214, 214, 214);
+            }
+
+            #container {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+
+            .grid-item {
+                text-align: left;
+                border: 0 solid black;
+                margin: 10px;
+                height: 200px;
+                position: relative;
+                box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+            }
+            strong {
+                color: rgb(255, 191, 0);
+            }
+            #logo {
+                text-align: left;
+                margin: 10px;
+            }
+            #navbar {
+                margin-bottom: 20px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                background: rgb(255, 255, 255)
+            }
+            
+            .textarea {
+                width: 100%;
+                height: 100%;
+                color: black;
+                border: 0 solid black;
+            }
+            .del-btn {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                border: 0 solid black;
+                background: none;
+                color: grey;
+            }
+            .edit-btn {
+                position: absolute;
+                right: 18px;
+                top: 0px;
+                border: 0 solid black;
+                background: none;
+                color: grey;
+            }
+            .del-btn:hover {
+                color: black;
+            }
+            .edit-btn:hover {
+                color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div id="navbar">
+               <div id="logo">Khoadoan.page <strong>Notes</strong></div>
+            </div>
+            <div id="headercontainer">
+            <textarea id="notebox" placeholder="Add new notes here"></textarea>
+            <br>
+            <button class="savebtn" onclick="save()">Save</button>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="container">
+                
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
